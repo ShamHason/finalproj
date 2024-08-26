@@ -171,9 +171,10 @@
 
     function hidePopup(event) {
         
-        if(event.target===document.querySelector("#close-popup2") || popup)
-        popup.style.display = 'none';
-    }
+        if(event.target===document.querySelector("#close-popup2") || event.target === popup || event.target===document.getElementById("close"))
+    popup.style.display = 'none';
+}
+
 
     function validatePhoneNumber(phone) {
         const phonePattern = /^\d{10}$/; // Regex pattern for exactly 10 digits
